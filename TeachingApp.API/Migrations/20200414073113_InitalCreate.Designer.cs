@@ -8,8 +8,8 @@ using TeachingApp.API.Data;
 namespace TeachingApp.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200411064207_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20200414073113_InitalCreate")]
+    partial class InitalCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
