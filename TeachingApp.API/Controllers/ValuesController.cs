@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using TeachingApp.API.Data;
 
 namespace DatingApp.API.Controllers
 {
@@ -10,6 +11,10 @@ namespace DatingApp.API.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        public ValuesController(DataContext context)
+        {
+            
+        }
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
