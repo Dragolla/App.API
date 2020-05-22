@@ -46,7 +46,7 @@ namespace TeachingApp.API.Controllers
         
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         { 
-            try{
+          
             throw new Exception("computer says no fuck off");
             var userFromRepo = await _repo.Login(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
             if (userFromRepo == null)
@@ -66,10 +66,7 @@ namespace TeachingApp.API.Controllers
                   var tokenHandler = new JwtSecurityTokenHandler();
                   var token = tokenHandler.CreateToken(tokenDescriptor);
                   return Ok( new{ token = tokenHandler.WriteToken(token)});
-        }
-        catch{
-            return StatusCode(500, "Computer really says no");
-        }
+        
            
         }
     }
